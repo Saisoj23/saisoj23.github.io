@@ -210,6 +210,10 @@ button {
 }
 
 @media only screen and (orientation: portrait) {
+    :root {
+        font-size: 14px;
+    }
+
     .menu {
         visibility: visible;
     }
