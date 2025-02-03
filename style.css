@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: url("Images/Bee.png");
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    margin: 0%;
+}
+
+header {
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    position: fixed;
+    display: flex;
+    background-color: black;
+    height: 5rem;
+}
+
+footer {
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: black;
+    height: 5rem;
+    text-align: center;
+    color: #ffffff66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+:root {
+    font-size: 8px;
+}
+
+.menu {
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.dropdown .content{
+    position: absolute;
+    display: flex;
+    justify-content: stretch;
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
+    width: 50%;
+}
+
+.dropdown button {
+    flex: 1;
+    background: linear-gradient(180deg, #000000 0%, #000000 100%);
+    border: none;
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    transition: all 300ms ease-in;
+}
+
+.dropdown button:hover {
+    background: linear-gradient(180deg, #000000 0%, #222222 100%);
+}
+
+.test {
+    background-color: #ffffff33;
+    display: grid;
+    width: 20rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.test button 
+{
+    margin: 10px;
+    height: 10rem;
+    border-radius: 15px;
+    border: darkorange outset 5px;
+    font-size: 3rem;
+    color: darkorange;
+    font-family: "Eagle Lake", serif;
+    transition: all 100ms ease-in;
+}
+
+.test button:hover
+{
+    transform: scale(1.2);
+    background-color: darkorange;
+    color: white;
+    font-family: "Eagle Lake", serif;
+}
+
+.animation-container {
+    --logo-scale: 32rem;
+    --space-cale: 4rem;
+
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 5rem;
+
+    --letter-translate: 15.5%;
+    --second-to-saisoj: 200ms;
+    --second-to-sd: 100ms;
+    
+    transform: translate(0%, -50%);
+    overflow: hidden;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: all 1ms linear calc(calc(var(--second-to-saisoj) * 2) + var(--second-to-sd));
+}
+
+.animation-container:hover {
+    width: 32rem;
+
+    transition: all 1ms linear;
+}
+
+.animation-container div {
+    position: absolute;
+
+    height: var(--logo-scale);
+    width: var(--logo-scale);
+    top: 50%;
+    left: 0%;
+    transform: translate(-42%, -50%);
+}
+
+.animation-container #SJ {
+    opacity: 1;
+    transition: opacity 1ms linear calc(calc(var(--second-to-saisoj) * 2) + var(--second-to-sd));
+}
+
+.animation-container #S, .animation-container #J {
+    visibility: hidden;
+    opacity: 1;
+
+    transition: all var(--second-to-saisoj) ease-in calc(var(--second-to-saisoj) + var(--second-to-sd));
+}
+
+.animation-container #Saisoj {
+    visibility: hidden;
+    opacity: 0;
+    translate: 15.5%;
+
+    transition: all var(--second-to-saisoj) ease-in var(--second-to-sd);
+}
+
+.animation-container #SD {
+    visibility: hidden;
+    opacity: 0;
+    translate: 42.5%;
+    transition: all var(--second-to-sd) ease-in;
+}
+
+.animation-container:hover #SJ {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1ms ease-in 1ms
+}
+
+.animation-container:hover #J{
+    visibility: visible;
+    translate: 31%;
+    opacity: 1;
+
+    transition: all var(--second-to-saisoj) ease-in
+}
+
+.animation-container:hover #S {
+    visibility: visible;
+    opacity: 1;
+
+    transition: all var(--second-to-saisoj) ease-in
+}
+
+.animation-container:hover #Saisoj {
+    visibility: visible;
+    opacity: 1;
+    
+    transition: all var(--second-to-saisoj) ease-out var(--second-to-saisoj);
+}
+
+.animation-container:hover #SD {
+    visibility: visible;
+    opacity: 1;
+    transition: all var(--second-to-sd) ease-in calc((var(--second-to-saisoj) * 2));
+}
+
+@media only screen and (orientation: portrait) {
+    .menu {
+        visibility: visible;
+    }
+
+    .dropdown:hover .content {
+        display: grid;
+    }
+
+    .dropdown .content{
+        position: absolute;
+        display: none;
+        top: 100%;
+        width: 18rem;
+    }
+    
+    .dropdown button {
+        display: block;
+        height: 5rem;
+    }
+
+}

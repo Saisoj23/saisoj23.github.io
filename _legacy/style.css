@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+body {
+    background-image: url("Images/Bee.png");
+    background-size:cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    position: fixed;
+    background-color: black;
+    height: 5rem;
+    overflow: hidden;
+}
+
+:root {
+    font-size: 12px;
+}
+
+.margin {
+    height: 15rem;
+}
+
+.test {
+    background-color: #ffffff33;
+    display: grid;
+    width: 20rem;
+    top: 5rem;
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.test button 
+{
+    margin: 10px;
+    height: 10rem;
+    border-radius: 15px;
+    border: darkorange outset 5px;
+    font-size: 3rem;
+    color: darkorange;
+    font-family: "Eagle Lake", serif;
+    transition: all 100ms ease-in;
+}
+
+.test button:hover
+{
+    transform: scale(1.2);
+    background-color: darkorange;
+    color: white;
+    font-family: "Eagle Lake", serif;
+}
+
+.animation-container {
+    --logo-scale: 35rem;
+    --space-cale:4rem;
+
+    background-color: black;
+    position: absolute;
+    width: var(--space-cale);
+    height:  var(--logo-scale);
+
+    --letter-translate: 15.5%;
+    --second-to-saisoj: 200ms;
+    --second-to-sd: 100ms;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    transition: all 1ms linear calc(calc(var(--second-to-saisoj) * 2) + var(--second-to-sd));
+}
+
+.animation-container:hover {
+    width: var(--logo-scale);
+
+    transition: all 1ms linear;
+}
+
+.animation-container div {
+    position: absolute;
+    width: var(--logo-scale);
+    height: var(--logo-scale);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animation-container #SJ {
+    opacity: 1;
+    transition: opacity 1ms linear calc(calc(var(--second-to-saisoj) * 2) + var(--second-to-sd));
+}
+
+.animation-container #S, .animation-container #J {
+    visibility: hidden;
+    opacity: 1;
+
+    transition: all var(--second-to-saisoj) ease-in calc(var(--second-to-saisoj) + var(--second-to-sd));
+}
+
+.animation-container #Saisoj {
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all var(--second-to-saisoj) ease-in var(--second-to-sd);
+}
+
+.animation-container #SD {
+    opacity: 0;
+    transition: all var(--second-to-sd) ease-in;
+}
+
+.animation-container #SaisojGroup {
+    transition: all var(--second-to-sd) ease-in var(--second-to-sd);
+}
+
+.animation-container:hover #SJ {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1ms ease-in 1ms
+}
+
+.animation-container:hover #J{
+    visibility: visible;
+    translate: var(--letter-translate);
+    opacity: 1;
+
+    transition: all var(--second-to-saisoj) ease-in
+}
+
+.animation-container:hover #S {
+    visibility: visible;
+    translate: calc(0% - var(--letter-translate));
+    opacity: 1;
+
+    transition: all var(--second-to-saisoj) ease-in
+}
+
+.animation-container:hover #Saisoj {
+    visibility: visible;
+    opacity: 1;
+    
+    transition: all var(--second-to-saisoj) ease-out var(--second-to-saisoj);
+}
+
+.animation-container:hover #SD {
+    opacity: 1;
+    transition: all var(--second-to-sd) ease-in calc(((var(--second-to-saisoj) * 2)) + var(--second-to-sd));
+}
+
+.animation-container:hover #SaisojGroup {
+    transition: all var(--second-to-sd) ease-in calc(var(--second-to-saisoj) * 2);
+    translate: -26.95%;
+}
