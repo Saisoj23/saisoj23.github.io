@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 :root {
     font-size: 8px;
 }
 
 body {
-    background-image: url("Images/Bee.png");
+    background-image: url("Images/Background.jpg");
     background-size:cover;
     background-position-x: center;
     background-repeat: no-repeat;
     margin: 0%;
+
+    --background-color: rgba(0,0,0,.2);
+    --window-blur: 10px;
+    --drop-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    --light-rim: inset 0 2px 2px rgba(255, 255, 255, .2);
+
+    --border: rgba(255,255,255,.5) 1px outset;
 }
 
 header {
@@ -19,7 +27,7 @@ header {
     right: 0%;
     top: 0%;
     position: fixed; 
-    background-color: black;
+    background-color: var(--background-color);
     
     z-index: 10;
 }
@@ -28,7 +36,8 @@ footer {
     left: 0%;
     right: 0%;
     bottom: 0%;
-    background-color: black;
+    background-color: var(--background-color);
+    backdrop-filter: blur(var(--window-blur));
     height: 5rem;
     text-align: center;
     color: #ffffff66;
@@ -47,6 +56,7 @@ footer {
     background-color: black;
     transition: all 300ms ease-out;
     overflow: hidden;
+    background-image: url("Images/Background.jpg");
 }
 
 #splash img {
@@ -61,10 +71,36 @@ footer {
     height: 100vh !important;
 }
 
-.head {
+.head-group {
     position: relative;
     display: flex;
     height: 5rem;
+}
+
+.head-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(var(--window-blur));
+    border: var(--border);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    z-index: -10;
+    box-shadow: var(--drop-shadow), var(--light-rim);
+}
+
+.foot-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(var(--window-blur));
+    box-shadow: var(--light-rim);
+    border: var(--border);
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    z-index: -10;
 }
 
 .menu {
@@ -83,11 +119,12 @@ footer {
     bottom: 0%;
     top: 0%;
     width: 50%;
+    backdrop-filter: inherit;
 }
 
 .dropdown button {
     flex: 1;
-    background-color: #000000;
+    background-color: transparent;
     border: none;
     color: white;
     font-family: "Montserrat";
@@ -98,15 +135,15 @@ footer {
 }
 
 .dropdown button:hover {
-    background-color: #222222;
+    background-color: rgba(100,100,100,.2);
 }
 
 .test {
-    background-color: #ffffff22;
-    backdrop-filter: blur(10px);
+    background-color: var(--background-color);
+    backdrop-filter: blur(var(--window-blur));
     display: grid;
     width: 20rem;
-    margin-top: 15rem;
+    margin-top: 20rem;
     margin-bottom: 5rem;
 
     position: relative;
@@ -114,6 +151,7 @@ footer {
     right: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
+    box-shadow: var(--drop-shadow), var(--light-rim);
 }
 
 button {
@@ -125,26 +163,26 @@ button {
     margin: 10px;
     height: 10rem;
     border-radius: 15px;
-    border: darkorange outset 5px;
+    background-color: var(--background-color);
+    border: var(--border);
     font-size: 3rem;
     color: darkorange;
-    font-family: "Eagle Lake", serif;
+    font-family: "Audiowide", sans-serif;
     transition: all 100ms ease-in;
+
+    box-shadow: var(--drop-shadow), var(--light-rim)
 }
 
 .test button:hover
 {
     transform: scale(1.2);
-    background-color: darkorange;
+    text-shadow: white 0px 0px 20px;
     color: white;
-    font-family: "Eagle Lake", serif;
 }
 
 #animation-container {
     --logo-scale: 32rem;
-    --space-cale: 4rem;
 
-    background-color: black;
     position: absolute;
     height: 4.9rem;
     width: 5rem;
@@ -251,29 +289,31 @@ button {
     .dropdown .content{
         position: absolute;
         display: block;
-        visibility: hidden;
         top: 100%;
         width: 18rem;
         height: 20rem;
-        background: black;
-        opacity: 0;
-
-        border-radius: 0px 0px 15px 15px;
         overflow: hidden;
-
+        border-radius: 0px 0px 15px 15px;
+        
+        border: var(--border);
+        border-top: none;
+        opacity: 0;
+        visibility: hidden;
+        background-color: var(--background-color);
+        backdrop-filter: blur(var(--window-blur));
+        box-shadow: var(--drop-shadow), var(--light-rim);
         transition: all 100ms ease-in;
     }
 
-    .dropdown:hover .content {
-        visibility: visible;    
+    .dropdown:hover .content {  
         opacity: 1;
+        visibility: visible;
     }
     
     .dropdown button {
         position: relative;
         height: 5rem;
         width: 100%;
-
     }
 
     #splash img {

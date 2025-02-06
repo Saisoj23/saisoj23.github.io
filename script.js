@@ -1,6 +1,6 @@
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
-    if (scrolled < 5)
+    if (scrolled < 100)
     {
         document.getElementById('splash').classList.add('fullscreen');
     }
