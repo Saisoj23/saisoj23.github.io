@@ -241,7 +241,7 @@ button {
 
 @media only screen and (orientation: portrait) {
     :root {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .menu {
