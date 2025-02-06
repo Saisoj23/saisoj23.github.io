@@ -87,18 +87,18 @@ footer {
 
 .dropdown button {
     flex: 1;
-    background: linear-gradient(180deg, #000000 0%, #000000 100%);
+    background-color: #000000;
     border: none;
     color: white;
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 1.5rem;
 
-    transition: all 300ms ease-in;
+    transition: all 100ms ease-in;
 }
 
 .dropdown button:hover {
-    background: linear-gradient(180deg, #000000 0%, #222222 100%);
+    background-color: #222222;
 }
 
 .test {
@@ -241,7 +241,7 @@ button {
 
 @media only screen and (orientation: portrait) {
     :root {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .menu {
@@ -250,7 +250,8 @@ button {
 
     .dropdown .content{
         position: absolute;
-        display: none;
+        display: block;
+        visibility: hidden;
         top: 100%;
         width: 18rem;
         height: 20rem;
@@ -260,14 +261,12 @@ button {
         border-radius: 0px 0px 15px 15px;
         overflow: hidden;
 
-        transition: all 500ms ease-in;
+        transition: all 100ms ease-in;
     }
 
     .dropdown:hover .content {
-        display: block;
+        visibility: visible;    
         opacity: 1;
-
-        transition: all 500ms ease-in;
     }
     
     .dropdown button {
