@@ -6,6 +6,16 @@
     font-size: 8px;
 }
 
+* {
+    margin: 0;
+}
+
+section {
+    position: relative;
+    bottom: 5rem;
+    margin: 5rem 0 0 0 ;
+}
+
 body {
     background-image: url("Images/Background.jpg");
     background-size:cover;
@@ -44,14 +54,21 @@ footer {
     bottom: 0%;
     background-color: var(--background-color);
     backdrop-filter: blur(var(--window-blur));
-    height: 5rem;
+    height: auto;
     text-align: center;
     color: #ffffff66;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
+    line-height: 2rem;
+}
+
+footer a {
+    color: #ffffff66;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer p {
+    padding: 2rem;
 }
 
 #splash {
@@ -106,9 +123,22 @@ footer {
     height: 100vh !important;
 }
 
-section {
-    display: none;
+.title h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 6rem;
+    width: 100%;
+    border: var(--border);
+    border-right: none;
+    border-left: none;
+    backdrop-filter: blur(var(--window-blur));
+    box-shadow: var(--drop-shadow), var(--light-rim);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+    margin: 0  0 10rem 0;
+    padding: 2rem 0rem;
 }
+
 
 .head-group {
     position: relative;
@@ -144,6 +174,7 @@ section {
 .menu {
     position: absolute;
     right: 0%;
+    top: 0%;
     height: 100%;
     visibility: hidden;
     cursor: pointer;
@@ -172,11 +203,46 @@ section {
     transition: all 100ms ease-in;
 }
 
+.dropdown a {
+    flex: 1;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: white;
+    height: 100%;
+
+
+    transition: all 100ms ease-in;
+}
+
+.dropdown h3  {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+
+}
+
 .dropdown button:hover {
     background-color: rgba(100,100,100,.2);
 }
 
+.dropdown a:hover {
+    background-color: rgba(100,100,100,.2);
+}
+
 button {
+    cursor: pointer;
+}
+
+a {
     cursor: pointer;
 }
 
@@ -187,7 +253,7 @@ button {
     
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 70%;
     left: 50%;
     transform: translateX(-50%);
@@ -222,7 +288,9 @@ button {
     vertical-align: middle;
     text-shadow: var(--text-shadow);
 
-    transform: translateY(10%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     padding: 30px;
 }
@@ -343,6 +411,11 @@ button {
 }
 
 @media only screen and (orientation: portrait) {
+
+    footer {
+        font-size: 1.5rem;
+    }
+
     :root {
         font-size: 10px;
     }
@@ -352,8 +425,6 @@ button {
     }
 
     .grid {
-        margin-top: 15rem;
-        margin-bottom: 5rem;
         width: 100%;
         height: 150vh;
 
@@ -398,6 +469,15 @@ button {
         position: relative;
         height: 5rem;
         width: 100%;
+    }
+
+    .dropdown a {
+        height: 5rem;
+        width: 100%;
+    }
+
+    .title h1 {
+        font-size: 2.5rem;
     }
 
     #splash img {
