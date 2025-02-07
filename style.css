@@ -15,10 +15,16 @@ body {
 
     --background-color: rgba(0,0,0,.2);
     --window-blur: 10px;
+    --text-shadow: 0 3px 3px rgba(0, 0, 0, .5);
     --drop-shadow: 0 5px 5px rgba(0, 0, 0, .5);
     --light-rim: inset 0 2px 2px rgba(255, 255, 255, .2);
 
     --border: rgba(255,255,255,.5) 1px outset;
+}
+
+article {
+    margin-top: 20rem;
+    margin-bottom: 10rem;
 }
 
 header {
@@ -68,8 +74,40 @@ footer {
     transform: translate(-50%, -50%);
 }
 
+#splash div.right {
+    position: absolute;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    bottom: 5%;
+    right: 0%;
+}
+
+#splash div.left {
+    position: absolute;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    bottom: 5%;
+    left: 0%;
+}
+
+
+#splash div h3 {
+    width: 20rem;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    text-align: center;
+}
+
 .fullscreen {
     height: 100vh !important;
+}
+
+section {
+    display: none;
 }
 
 .head-group {
@@ -118,7 +156,7 @@ footer {
     right: 0%;
     bottom: 0%;
     top: 0%;
-    width: 50%;
+    width: 70%;
     backdrop-filter: inherit;
 }
 
@@ -146,8 +184,6 @@ button {
     --border-radius: 30px;
 
     position: relative;
-    margin-top: 20rem;
-    margin-bottom: 10rem;
     
     display: flex;
     flex-direction: column;
@@ -175,24 +211,32 @@ button {
     flex: 5;
 }
 
-.row-info h1 {
+.row-info h3 {
     position: relative;
+    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-size: 5rem;
+    font-weight: 300;
     color: white;
     text-align: center;
-    vertical-align:middle;
+    vertical-align: middle;
+    text-shadow: var(--text-shadow);
+
+    transform: translateY(10%);
 
     padding: 30px;
-
-    top: 30%;
-    transform: translateY(-50%);
 }
 
 .row-image {
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow), var(--light-rim);
     overflow: hidden;
+
+    transition: all 100ms;
+}
+
+.row-image:hover {
+    border-radius: 0px;
 }
 
 .row-image img {
@@ -202,12 +246,10 @@ button {
 }
 
 #animation-container {
-    --logo-scale: 32rem;
-
     position: absolute;
     height: 4.9rem;
     width: 5rem;
-
+    --logo-scale: 32rem;
     --letter-translate: 15.5%;
     --second-to-saisoj: 200ms;
     --second-to-sd: 100ms;
@@ -222,7 +264,9 @@ button {
 }
 
 #animation-container:hover {
-    width: 32rem;
+    /*width: 32rem;*/
+    width: 25rem;
+
 
     transition: all 1ms linear;
 }
@@ -315,6 +359,7 @@ button {
 
     }
 
+
     .grid-row:nth-child(even) .row-image {
         border-radius: 0px var(--border-radius) var(--border-radius) 0px;
     }
@@ -330,7 +375,7 @@ button {
         display: block;
         top: 100%;
         width: 18rem;
-        height: 20rem;
+        height: 25rem;
         overflow: hidden;
         border-radius: 0px 0px 15px 15px;
         
@@ -359,8 +404,20 @@ button {
         width: 80%;
     }
 
-    .row-info h1 {
+    #splash div.left {
+        width: 100%;
+        bottom: 20%;
+    }
+    #splash div.right {
+        width: 100%;
+
+    }
+
+    #splash div h3 {
+        font-size: 2.5rem;
+    }
+
+    .row-info h3 {
         font-size: 2rem;
-        transform: translateY(-40%);
     }
 }
