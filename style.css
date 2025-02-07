@@ -71,6 +71,22 @@ footer p {
     padding: 2rem;
 }
 
+h2 {
+    display: block;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 1000;
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+    margin: 0 0 5rem 0;
+}
+
+h2 span {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
 #splash {
     position: relative;
     display: block;
@@ -135,8 +151,11 @@ footer p {
     box-shadow: var(--drop-shadow), var(--light-rim);
     text-shadow: var(--text-shadow);
     text-align: center;
-    margin: 0  0 10rem 0;
     padding: 2rem 0rem;
+}
+
+.title {
+    margin: 0  0 5rem 0;
 }
 
 
@@ -191,18 +210,6 @@ footer p {
     backdrop-filter: inherit;
 }
 
-.dropdown button {
-    flex: 1;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-
-    transition: all 100ms ease-in;
-}
-
 .dropdown a {
     flex: 1;
     display: inline-block;
@@ -230,10 +237,6 @@ footer p {
 
 }
 
-.dropdown button:hover {
-    background-color: rgba(100,100,100,.2);
-}
-
 .dropdown a:hover {
     background-color: rgba(100,100,100,.2);
 }
@@ -251,13 +254,10 @@ a {
 
     position: relative;
     
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
     width: 70%;
     left: 50%;
     transform: translateX(-50%);
-    height: 250rem;
 }
 
 .grid-row {
@@ -265,8 +265,7 @@ a {
     display: flex;
     flex-direction: row;
     flex: 1;
-    height: 100vh;
-    overflow: hidden;
+    height: 40rem;
 }
 
 .grid-row:nth-child(even) {
@@ -300,17 +299,44 @@ a {
     box-shadow: var(--drop-shadow), var(--light-rim);
     overflow: hidden;
 
-    transition: all 100ms;
+    transition: all 100ms ease-in;
 }
 
 .row-image:hover {
     border-radius: 0px;
+    transform: scale(1.3);
 }
 
 .row-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+iframe {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50vw;
+    height: 28vw;
+}
+
+.game-logos a{
+    margin: 5rem;
+    justify-self: center;
+    position: relative;
+    display: block;    
+}
+
+.game-logos img {
+    min-width: 40rem;
+    max-width: 60rem;;
+    transition: all 100ms ease-in;
+}
+
+.game-logos img:hover {
+    transform: scale(1.3);
 }
 
 #animation-container {
@@ -426,20 +452,42 @@ a {
 
     .grid {
         width: 100%;
-        height: 150vh;
-
     }
 
+    .grid-row {
+        height: 20rem;
+    }
 
-    .grid-row:nth-child(even) .row-image {
+    .grid-row:nth-child(even) .row-image{
         border-radius: 0px var(--border-radius) var(--border-radius) 0px;
     }
 
-    .grid-row:nth-child(odd) .row-image {
+    .grid-row:nth-child(odd) .row-image{
         border-radius: var(--border-radius) 0px 0px var(--border-radius);
     }
 
+    .row-image:hover {
+        border-radius: 0px;
+        transform: scale(1.2);
+    }
+
+    .game-logos img {
+        min-width: 40%;
+        max-width: 90%;
+        transition: all 100ms ease-in;
+    }
     
+    .game-logos img:hover {
+        transform: scale(1.2);
+    }
+
+    iframe {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        height: 50vw;
+    }
 
     .dropdown .content{
         position: absolute;
@@ -465,11 +513,6 @@ a {
         visibility: visible;
     }
     
-    .dropdown button {
-        position: relative;
-        height: 5rem;
-        width: 100%;
-    }
 
     .dropdown a {
         height: 5rem;
