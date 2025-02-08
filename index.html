@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
@@ -11,6 +11,13 @@
 </head>
 
 <body>
+    <div id="image-overlay" class="invisible" onclick="CloseImageView('')">
+        <figure>
+            <img id="image-full" src="Images/Bee.png">
+            <figcaption><button onclick="CloseImageView('')">cerrar</button></figcaption>
+        </figure>
+    </div>
+
     <header>
         <div id="splash" class="fullscreen">
             <img src="SVG/Animation/SaisojArts.svg">
@@ -58,31 +65,31 @@
         <div class="grid">
             <div class="grid-row">
                 <div class="row-info"><h3>Diseño de <mark class="blue">logos</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/logos.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/logos.jpg')"><img src="Images/GraphicDesign/logos.jpg"></div>
             </div>
             <div class="grid-row">
                 <div class="row-info"><h3>Diseño de <mark class="red">publicaciones de redes</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/identidad.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/identidad.jpg')"><img src="Images/GraphicDesign/identidad.jpg"></div>
             </div>
             <div class="grid-row">
                 <div class="row-info"><h3>Ilustración y <mark class="purple">animación 3D</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/anim3d.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/anim3d.jpg')"><img src="Images/GraphicDesign/anim3d.jpg"></div>
             </div>
             <div class="grid-row">
                 <div class="row-info"><h3>Diseño de <mark class="pink">folletos</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/folletos.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/folletos.jpg')"><img src="Images/GraphicDesign/folletos.jpg"></div>
             </div>
             <div class="grid-row">
                 <div class="row-info"><h3>Diseño de <mark class="green">tarjetas</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/tarjetas.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/tarjetas.jpg')"><img src="Images/GraphicDesign/tarjetas.jpg"></div>
             </div>
             <div class="grid-row">
                 <div class="row-info"><h3>Diseño de <mark class="orange">carteles</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/cartel.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/cartel.jpg')"><img src="Images/GraphicDesign/cartel.jpg"></div>
             </div>
             <div class="grid-row">
                 <div class="row-info"><h3>Diseño de <mark class="yellow">remeras</mark></h3></div>
-                <div class="row-image img-clickable"><img src="Images/GraphicDesign/tshirt.jpg"></div>
+                <div class="row-image img-clickable" onclick="OpenImageView('Images/GraphicDesign/tshirt.jpg')"><img src="Images/GraphicDesign/tshirt.jpg"></div>
             </div>
         </div>
 
@@ -102,22 +109,22 @@
         <div class="title"><h1>Fotografía de fauna</h1></div>
 
         <div class="photo-galery">
-            <img class="img-clickable" src="Images/Photos/IMG_5702.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_6168.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_6211.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_6941.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_7567.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_7685.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_7772.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_7866.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_8221.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_8490.JPG">
-            <img class="img-clickable" src="Images/Photos/IMG_6752.JPG">
-            <img class="img-clickable" src="Images/Photos/IMG_8644.JPG">
-            <img class="img-clickable" src="Images/Photos/IMG_8499.JPG">
-            <img class="img-clickable" src="Images/Photos/IMG_8721.JPG">
-            <img class="img-clickable" src="Images/Photos/IMG_8269.jpg">
-            <img class="img-clickable" src="Images/Photos/IMG_8814.JPG">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_5702.jpg')" src="Images/Photos/IMG_5702.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_6168.jpg')" src="Images/Photos/IMG_6168.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_6211.jpg')" src="Images/Photos/IMG_6211.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_6941.jpg')" src="Images/Photos/IMG_6941.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_7567.jpg')" src="Images/Photos/IMG_7567.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_7685.jpg')" src="Images/Photos/IMG_7685.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_7772.jpg')" src="Images/Photos/IMG_7772.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_7866.jpg')" src="Images/Photos/IMG_7866.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8221.jpg')" src="Images/Photos/IMG_8221.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8490.jpg')" src="Images/Photos/IMG_8490.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_6752.jpg')" src="Images/Photos/IMG_6752.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8644.jpg')" src="Images/Photos/IMG_8644.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8499.jpg')" src="Images/Photos/IMG_8499.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8721.jpg')" src="Images/Photos/IMG_8721.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8269.jpg')" src="Images/Photos/IMG_8269.jpg">
+            <img class="img-clickable" onclick="OpenImageView('Images/Photos/IMG_8814.jpg')" src="Images/Photos/IMG_8814.jpg">
         </div>
 
         <section id="videojuegos"></section>
@@ -133,14 +140,14 @@
         <div class="title"><h1>Otros trabajos</h1></div>
 
         <div class="art-galery">
-            <figure><img class="img-clickable" src="Images/OtherArt/lost_and_broken_by_saisoj23_dez2tl6.png"><figcaption>"Lost and Broken"</figcaption></figure>
-            <figure><img class="img-clickable" src="Images/OtherArt/buttercup_skull_by_saisoj23_dhm9x7o.png" style="image-rendering: pixelated;"><figcaption>"Buttercup Skull"</figcaption></figure>
-            <figure><img class="img-clickable" src="Images/OtherArt/dark_materials_pixel_fan_art__by_saisoj23_dhm9xcb.png" style="image-rendering: pixelated;"><figcaption>His Dark Materials fan art</figcaption></figure>
-            <figure><img class="img-clickable" src="Images/OtherArt/don_t_hug_me_i_m_scared_fanart_by_saisoj23_dhm9wza.png"><figcaption>DHMIS fan art</figcaption></figure>
-            <figure><img class="img-clickable" src="Images/OtherArt/error__for_unity_tutorial__by_saisoj23_dhm9tqe.png"><figcaption>Triplanar Island (Unity test)</figcaption></figure>
-            <figure><img class="img-clickable" src="Images/OtherArt/the_hobbit_fan_art_by_saisoj23.png" style="image-rendering: pixelated;"><figcaption>The Hobbit fan art</figcaption></figure>
-            <figure><img class="img-clickable" src="Images/OtherArt/the_heckernaut_artwork_by_saisoj23.jpg"><figcaption>The Heckernaut artwork</figcaption></figure>
-            <figure style="vertical-align:top;"><img class="img-clickable" src="Images/OtherArt/waiting_in_the_rain_by_saisoj23_dez2tt6.png""><figcaption>"Waiting in the Rain"</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/lost_and_broken_by_saisoj23_dez2tl6.png')" src="Images/OtherArt/lost_and_broken_by_saisoj23_dez2tl6.png"><figcaption>"Lost and Broken"</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/buttercup_skull_by_saisoj23_dhm9x7o.png')" src="Images/OtherArt/buttercup_skull_by_saisoj23_dhm9x7o.png" style="image-rendering: pixelated;"><figcaption>"Buttercup Skull"</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/dark_materials_pixel_fan_art__by_saisoj23_dhm9xcb.png')" src="Images/OtherArt/dark_materials_pixel_fan_art__by_saisoj23_dhm9xcb.png" style="image-rendering: pixelated;"><figcaption>His Dark Materials fan art</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/don_t_hug_me_i_m_scared_fanart_by_saisoj23_dhm9wza.png')" src="Images/OtherArt/don_t_hug_me_i_m_scared_fanart_by_saisoj23_dhm9wza.png"><figcaption>DHMIS fan art</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/error__for_unity_tutorial__by_saisoj23_dhm9tqe.png')" src="Images/OtherArt/error__for_unity_tutorial__by_saisoj23_dhm9tqe.png"><figcaption>Triplanar Island (Unity test)</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/the_hobbit_fan_art_by_saisoj23.png')" src="Images/OtherArt/the_hobbit_fan_art_by_saisoj23.png" style="image-rendering: pixelated;"><figcaption>The Hobbit fan art</figcaption></figure>
+            <figure><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/the_heckernaut_artwork_by_saisoj23.jpg')" src="Images/OtherArt/the_heckernaut_artwork_by_saisoj23.jpg"><figcaption>The Heckernaut artwork</figcaption></figure>
+            <figure style="vertical-align:top;"><img class="img-clickable" onclick="OpenImageView('Images/OtherArt/waiting_in_the_rain_by_saisoj23_dez2tt6.png')" src="Images/OtherArt/waiting_in_the_rain_by_saisoj23_dez2tt6.png"><figcaption>"Waiting in the Rain"</figcaption></figure>
         </div>
 
         <section id="contacto"></section>

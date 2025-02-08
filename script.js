@@ -1,12 +1,28 @@
+const imageElement = document.getElementById('image-full');
+const imageConteiner = document.getElementById('image-overlay').classList;
+
+const splash = document.getElementById('splash').classList;
+
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
     if (scrolled < 10)
     {
-        document.getElementById('splash').classList.add('fullscreen');
+        splash.add('fullscreen');
     }
     else
     {
-        document.getElementById('splash').classList.remove('fullscreen');
+        splash.remove('fullscreen');
     }
-    console.log(scrolled);
 });
+
+function OpenImageView(image)
+{
+    imageElement.src = image;
+    imageConteiner.remove('invisible');
+}
+
+function CloseImageView()
+{
+    imageConteiner.add('invisible');
+}
+
