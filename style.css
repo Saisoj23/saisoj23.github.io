@@ -711,10 +711,12 @@ iframe {
     .form input {
         width: 80%;
         font-size: 2rem;
+        padding: .2rem 2rem ;
     }
 
     .form textarea {
         font-size: 2rem;
+        padding: 1rem 2rem;
     }
 
     :root {
