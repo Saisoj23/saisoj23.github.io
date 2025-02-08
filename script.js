@@ -24,5 +24,6 @@ function OpenImageView(image)
 function CloseImageView()
 {
     imageConteiner.add('invisible');
+    imageElement.src = "";
 }
 
