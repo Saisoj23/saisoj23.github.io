@@ -57,31 +57,31 @@
 
         <div class="grid">
             <div class="grid-row">
-                <div class="row-info"><h3>Diseño de logos</h3></div>
+                <div class="row-info"><h3>Diseño de <mark class="blue">logos</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/logos.jpg"></div>
             </div>
             <div class="grid-row">
-                <div class="row-info"><h3>Diseño de publicaciones de redes</h3></div>
+                <div class="row-info"><h3>Diseño de <mark class="red">publicaciones de redes</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/identidad.jpg"></div>
             </div>
             <div class="grid-row">
-                <div class="row-info"><h3>Ilustración y animación 3D</h3></div>
+                <div class="row-info"><h3>Ilustración y <mark class="purple">animación 3D</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/anim3d.jpg"></div>
             </div>
             <div class="grid-row">
-                <div class="row-info"><h3>Diseño de folletos</h3></div>
+                <div class="row-info"><h3>Diseño de <mark class="pink">folletos</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/folletos.jpg"></div>
             </div>
             <div class="grid-row">
-                <div class="row-info"><h3>Diseño de tarjetas</h3></div>
+                <div class="row-info"><h3>Diseño de <mark class="green">tarjetas</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/tarjetas.jpg"></div>
             </div>
             <div class="grid-row">
-                <div class="row-info"><h3>Diseño de carteles</h3></div>
+                <div class="row-info"><h3>Diseño de <mark class="orange">carteles</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/cartel.jpg"></div>
             </div>
             <div class="grid-row">
-                <div class="row-info"><h3>Diseño de remeras</h3></div>
+                <div class="row-info"><h3>Diseño de <mark class="yellow">remeras</mark></h3></div>
                 <div class="row-image img-clickable"><img src="Images/GraphicDesign/tshirt.jpg"></div>
             </div>
         </div>
@@ -145,15 +145,35 @@
 
         <section id="contacto"></section>
         <div class="title"><h1>Contacto y redes</h1></div>
+
+        <div class="form">
+            <h3>Solicitud</h3>
+            <form action="https://formsubmit.co/josemmvall@gmail.com" method="POST">
+                <label>*Nombre</label>
+                <input type="text" name="name" required placeholder="Alex Doe">
+                <label>*E-mail</label>
+                <input type="email" name="email" required placeholder="alexdoe@email.com">
+                <label>*Asunto</label>
+                <input type="text" name="subject" required placeholder="Un asunto importante">
+                <label>Teléfono</label>
+                <input type="tel" name="phone" placeholder="+54 9 1234-567891" minlength="9" maxlength="14" pattern="[0-9]{9-14}">
+                <label>*Mensaje</label>
+                <textarea name="message" required placeholder="Escribía para consultar sobre..."></textarea>
+                <p>* Requerido</p>
+
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </article>
 
     <footer>
         <div class="foot-box"></div>
-        <div><p>Redes sociales:<br>
-            Diseño gráfico: <a href="//www.instagram.com/saisoj_designs/" target="_blank">Instagram.com/saisoj_designs</a><br>
-            Arte: <a href="//www.instagram.com/accurate_josias_vall/" target="_blank">Instagram.com/accurate_josias_vall</a><br>
-            Fotografía: <a href="//www.instagram.com/josias_vall/" target="_blank">Instagram.com/josias_vall</a><br>
-            Videojuegos: <a href="//saisoj.itch.io" target="_blank">saisoj.Itch.io</a><br>
+        <div class="foot-text"><h3>Redes sociales</h3>
+            <p>Diseño gráfico: <a href="//www.instagram.com/saisoj_designs/" target="_blank"><img src="SVG/icons8-instagram.svg">Saisoj Designs</a><br>
+            Arte: <a href="//www.instagram.com/accurate_josias_vall/" target="_blank"><img src="SVG/icons8-instagram.svg">Accurate Josias Vall</a><br>
+            Fotografía: <a href="//www.instagram.com/josias_vall/" target="_blank"><img src="SVG/icons8-instagram.svg">Josias Vall</a><br>
+            Videojuegos: <a href="//saisoj.itch.io" target="_blank"><img src="SVG/icons8-itch-io.svg">Saisoj</a><br>
             </p></div>
     </footer>
 </body>
