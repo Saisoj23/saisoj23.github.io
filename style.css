@@ -304,7 +304,6 @@ a {
 
 .row-image:hover {
     border-radius: 0px;
-    transform: scale(1.3);
 }
 
 .row-image img {
@@ -322,21 +321,52 @@ iframe {
     height: 28vw;
 }
 
+.game-logos {
+    justify-items: center;
+}
+
 .game-logos a{
-    margin: 5rem;
-    justify-self: center;
-    position: relative;
-    display: block;    
+    display: contents;   
 }
 
 .game-logos img {
+    margin: 5rem;
+    position: relative;
+    max-width: 60rem;
     min-width: 40rem;
-    max-width: 60rem;;
+    max-height: 30rem;
     transition: all 100ms ease-in;
 }
 
-.game-logos img:hover {
-    transform: scale(1.3);
+.photo-galery {
+    position: relative;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+}
+
+.photo-galery img {
+    width: 100%;
+    transition: all 100ms ease-in;
+}
+
+.art-galery img {
+    display: inline-block;
+    width: 30%;
+    margin: 0px;
+    transition: all 100ms ease-in;
+}
+
+.art-galery figcaption {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 200;
+    bottom: 10px;
+}
+
+.img-clickable:hover {
+    transform: scale(1.2);
+    z-index: 5;
 }
 
 #animation-container {
@@ -466,21 +496,27 @@ iframe {
         border-radius: var(--border-radius) 0px 0px var(--border-radius);
     }
 
-    .row-image:hover {
-        border-radius: 0px;
-        transform: scale(1.2);
+    .game-logos img {
+        display: block;
+        min-width: 60%;
+        max-width: 80%;
     }
 
-    .game-logos img {
-        min-width: 40%;
-        max-width: 90%;
-        transition: all 100ms ease-in;
+    .photo-galery {
+        position: relative;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .art-galery img {
+        width: 80%;
+    }
+
+    .art-galery figcaption {
+        bottom: 15px;
     }
     
-    .game-logos img:hover {
-        transform: scale(1.2);
-    }
-
     iframe {
         position: relative;
         left: 50%;
@@ -489,12 +525,16 @@ iframe {
         height: 50vw;
     }
 
+    .img-clickable:hover {
+        transform: scale(1.1);
+    }
+
     .dropdown .content{
         position: absolute;
         display: block;
         top: 100%;
         width: 18rem;
-        height: 25rem;
+        height: 30rem;
         overflow: hidden;
         border-radius: 0px 0px 15px 15px;
         
@@ -529,10 +569,11 @@ iframe {
 
     #splash div.left {
         width: 100%;
-        bottom: 20%;
+        bottom: 30%;
     }
     #splash div.right {
         width: 100%;
+        bottom: 15%;
 
     }
 
