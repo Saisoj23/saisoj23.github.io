@@ -468,19 +468,29 @@ iframe {
     font-weight: 200;
 }
 
+.art-galery .rounded img {
+    border-radius: 30px;
+}
+
 .form {
     text-shadow: var(--text-shadow);
-    
+    position: relative;
+    width: 80rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background-color);
+    backdrop-filter: blur(var(--window-blur));
+    border: var(--border);
+    box-shadow: var(--drop-shadow);
+    border-radius: 30px;
+    justify-items: center;
+    justify-content: center;
     text-align: left;
     font-size: 4rem;
     font-weight: 300;
-    margin: 6rem;
+    padding: 3rem;
 }
 
-.form h3 {
-    font-style: italic;
-    font-size: 3rem;
-}
 
 .form p {
     display: block;
@@ -495,23 +505,25 @@ iframe {
     display: block;
     text-shadow: inherit;
     margin-bottom: 1rem;
+    margin-top: 3rem;
 }
 
 .form input {
     position: relative;
     display: block;
     height: 4rem;
-    width: 40rem;
+    width: 90%;
     padding: 1rem 3rem;
     margin-bottom: 2rem;
     border-radius: 100px;
     font-family: inherit;
     font-size: 2.5rem;
     border: none;
-    outline-width: 2px;
+    outline-width: 1.5px;
     outline-style: outset;
     outline-style: solid;
     outline-offset: 2px;
+    outline-color: #FFBC0000;
     box-shadow: var(--drop-shadow);
 }
 
@@ -539,17 +551,20 @@ iframe {
 .form textarea {
     position: relative;
     width: 60rem;
+    min-width: 60rem;
+    max-width: 60rem;
     height: 30rem;
-    max-width: 80%;
+
     font-family: inherit;
     font-size: 2.5rem;
     border-radius: 20px;
     padding: 2rem 3rem;
     border: none;
-    outline-width: 2px;
+    outline-width: 1.5px;
     outline-style: outset;
     outline-style: solid;
     outline-offset: 2px;
+    outline-color: #FFBC0000;
     box-shadow: var(--drop-shadow);
 }
 
@@ -570,17 +585,20 @@ iframe {
     position: relative;
     height: 5rem;
     width: 20rem;
-    margin-bottom: 2rem;
     border-radius: 100px;
     font-family: inherit;
     font-size: 2.5rem;
     border: none;
-    outline-width: 2px;
+    outline-width: 1.5px;
     outline-style: outset;
     outline-style: solid;
     outline-offset: 2px;
+    outline-color: #53993700;
     box-shadow: var(--drop-shadow);
     background-color: white;
+    left: 50%;
+    margin-bottom: 3rem;
+    transform: translateX(-50%);
 }
 
 .form button:hover {
@@ -704,19 +722,38 @@ iframe {
         height: 2.5rem;
     }
 
-    .form label, .form h3 {
+    .form {
+        width: 90vw;
+        padding: 0rem;
+    }
+
+    .form label {
         font-size: 2.5rem;
     }
 
     .form input {
-        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60vw;
+        width: 100%;
+        outline-width: 2px;
         font-size: 2rem;
         padding: .2rem 2rem ;
     }
 
     .form textarea {
+        outline-width: 2px;
+        width: 60vw;
+        min-width: 60vw;
+        max-width: 60vw;
         font-size: 2rem;
         padding: 1rem 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .form button {
+        outline-width: 2px;
     }
 
     :root {
@@ -777,7 +814,7 @@ iframe {
         display: block;
         top: 100%;
         width: 18rem;
-        height: 30rem;
+        height: 40rem;
         overflow: hidden;
         border-radius: 0px 0px 15px 15px;
         
