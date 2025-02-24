@@ -723,8 +723,10 @@ iframe {
     }
 
     .form {
-        width: 90vw;
-        padding: 0rem;
+        width: 75vw;
+        padding: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .form label {
@@ -732,18 +734,15 @@ iframe {
     }
 
     .form input {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60vw;
-        width: 100%;
         outline-width: 2px;
         font-size: 2rem;
-        padding: .2rem 2rem ;
+        padding: .2rem 2rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .form textarea {
         outline-width: 2px;
-        width: 60vw;
         min-width: 60vw;
         max-width: 60vw;
         font-size: 2rem;
