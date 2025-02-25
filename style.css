@@ -483,12 +483,17 @@ iframe {
     border: var(--border);
     box-shadow: var(--drop-shadow);
     border-radius: 30px;
-    justify-items: center;
-    justify-content: center;
     text-align: left;
     font-size: 4rem;
     font-weight: 300;
-    padding: 3rem;
+    padding: 1rem 3rem 4rem 3rem;
+}
+
+form {
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -512,7 +517,7 @@ iframe {
     position: relative;
     display: block;
     height: 4rem;
-    width: 90%;
+    width: 100%;
     padding: 1rem 3rem;
     margin-bottom: 2rem;
     border-radius: 100px;
@@ -522,13 +527,16 @@ iframe {
     outline-width: 1.5px;
     outline-style: outset;
     outline-style: solid;
-    outline-offset: 2px;
-    outline-color: #FFBC0000;
+    outline-offset: 4px;
+    outline-color: white;
     box-shadow: var(--drop-shadow);
+    transition: all ease-in 100ms;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .form input:placeholder-shown:not(:focus) {
-    outline-width: 0px;
+    outline-color: #00000000;
 }
 
 .form input:invalid {
@@ -543,17 +551,18 @@ iframe {
     outline-color: #539937;
 }
 
-
-.form input::placeholder {
-    color: #00000066;
+.form input:placeholder-shown:hover:not(:focus) {
+    outline-color: white;
 }
 
 .form textarea {
     position: relative;
-    width: 60rem;
-    min-width: 60rem;
-    max-width: 60rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     height: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
 
     font-family: inherit;
     font-size: 2.5rem;
@@ -563,9 +572,14 @@ iframe {
     outline-width: 1.5px;
     outline-style: outset;
     outline-style: solid;
-    outline-offset: 2px;
-    outline-color: #FFBC0000;
+    outline-offset: 4px;
+    outline-color: white;
     box-shadow: var(--drop-shadow);
+    transition: all ease-in 100ms;
+}
+
+.form textarea:placeholder-shown:not(:focus) {
+    outline-color: #00000000;
 }
 
 .form textarea:focus {
@@ -576,8 +590,8 @@ iframe {
     outline-color: #539937;
 }
 
-.form textarea::placeholder {
-    color: #00000066;
+.form textarea:placeholder-shown:hover:not(:focus) {
+    outline-color: white;
 }
 
 .form button {
@@ -592,13 +606,17 @@ iframe {
     outline-width: 1.5px;
     outline-style: outset;
     outline-style: solid;
-    outline-offset: 2px;
-    outline-color: #53993700;
+    outline-offset: 4px;
+    outline-color: white;
     box-shadow: var(--drop-shadow);
     background-color: white;
     left: 50%;
-    margin-bottom: 3rem;
     transform: translateX(-50%);
+    transition: all ease-in 100ms;
+}
+
+.form button:not(:focus) {
+    outline-color: #00000000;
 }
 
 .form button:hover {
@@ -723,10 +741,13 @@ iframe {
     }
 
     .form {
-        width: 75vw;
-        padding: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 80%;
+        padding: -1rem 2rem 2rem 2rem;
+    }
+
+    form {
+        width: 90%;
+        position: relative;
     }
 
     .form label {
@@ -743,8 +764,6 @@ iframe {
 
     .form textarea {
         outline-width: 2px;
-        min-width: 60vw;
-        max-width: 60vw;
         font-size: 2rem;
         padding: 1rem 2rem;
         left: 50%;
