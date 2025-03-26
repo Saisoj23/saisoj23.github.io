@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>  
+    <script id='sonic_js' data-port='8056' src='MetadataObtain.js' defer></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="full-screen">
+        <div id="container">
+            <div class="labels web">RadioElCamino.net</div>
+
+            <div id="sound-animation" class="showing">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+
+            <div id="cover">
+                <img id="sonic_art_full">
+            </div>
+            
+            <div class="labels info">
+                <b>Estas Escuchando: </b><br>
+                <div class="scroling">
+                    <ul>
+                        <li class="sonic_title"></li>
+                    </ul>
+                    <ul aria-hidden="true">
+                        <li class="sonic_title"></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <audio id='stream' autoplay preload="none" style="width: 400px;"> <source src="https://sp.unoredcdn.net/8056/stream" type="audio/mpeg"></audio>
+
+            <div id="controls" onclick="PlayPause()" class="playing">
+                <img id="pauseImage" class="showing" src="./Icons/pause_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg">
+                <img id="playImage" src="./Icons/play_arrow_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg">
+                <div class="button-background"></div>
+            </div>
+
+
+            <script>
+                let song = document.getElementById("stream");
+                let soundAnimationClasses = document.getElementById("sound-animation").classList;
+                let pauseImageClasses = document.getElementById("pauseImage").classList;
+                let playImageClasses = document.getElementById("playImage").classList;
+                let controlClasses = document.getElementById("controls").classList;
+
+                function PlayPause() {
+                    if (controlClasses.contains("playing"))
+                    {
+                        controlClasses.remove("playing");
+                        pauseImageClasses.remove("showing");
+                        playImageClasses.add("showing");
+                        soundAnimationClasses.remove("showing");
+                        song.pause();
+                    }
+                    else 
+                    {
+                        controlClasses.add("playing");
+                        pauseImageClasses.add("showing");
+                        playImageClasses.remove("showing");
+                        soundAnimationClasses.add("showing");
+                        song.play();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>

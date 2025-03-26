@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    font-family: Poppins;
+    font-size: 12px;
+    color: white;
+    user-select: none;
+}
+
+* { 
+    margin: 0px;
+    padding: 0px;
+
+    --blue: #007d99;
+    --gold: #c59634;
+    --grey: #232323;
+    --shadow: 3px 3px 3px #000000aa;
+    --transition: all ease-in 100ms;
+}
+
+#sound-animation {
+    height: 8rem;
+    min-height: 15vw;
+    max-height: 40vw;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: var(--transition);
+
+    transform: translateY(50%);
+}
+
+#sound-animation:not(.showing)
+{
+    opacity: 0;
+    transition: var(--transition);
+}
+
+#sound-animation .showing
+{
+    opacity: 1;
+    transition: var(--transition);
+}
+
+#sound-animation .stroke {
+    display: block;
+    position: relative;
+    background: white;
+    height: 100%;
+    width: 15px;
+    border-radius: 20px;
+    margin: 0 2px;
+    animation: sound-on 1.2s linear infinite
+}
+
+
+@keyframes sound-on {
+    50% {
+        height: 30%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+#sound-animation .stroke:nth-child(1){
+    animation-delay: 0s;
+}
+#sound-animation .stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+#sound-animation .stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+#sound-animation .stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+#sound-animation .stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+#sound-animation .stroke:nth-child(6){
+    width: 16rem;
+    opacity: 0;
+
+    min-width: 15vw;
+    min-height: 15vw;
+    max-width: 80vw;
+    max-height: 80vw;
+
+    animation-delay: 0.3s;
+}
+#sound-animation .stroke:nth-child(7){
+    animation-delay: 0s;
+}
+#sound-animation .stroke:nth-child(8){
+    animation-delay: 0.3s;
+}
+#sound-animation .stroke:nth-child(9){
+    animation-delay: 0.6s;
+}
+#sound-animation .stroke:nth-child(10){
+    animation-delay: 0.9s;
+}
+#sound-animation .stroke:nth-child(11){
+    animation-delay: 0.6s;
+}
+
+#container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 30px;
+    background: linear-gradient(0deg,#0f0f0f, #232323);
+    border-radius: 25px;
+    margin: 0.6rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.web {
+    justify-self: center;
+    user-select: text;
+    text-align: center;
+}
+
+#cover {
+    box-shadow: var(--shadow);
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    overflow: hidden;
+
+    min-width: 30vw;
+    min-height: 30vw;
+    max-width: 80vw;
+    max-height: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+
+    border: 2px white outset;
+    border-radius: 20px;
+    
+    margin-bottom: 2rem;
+}
+
+#cover img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.labels {
+    font-size: 1.6rem;
+}
+
+.scroling {
+    display: flex;
+    --gap: 2rem;
+    gap: var(--gap);
+    overflow: hidden;
+}
+
+.scroling ul {
+    list-style: none;
+    display: flex;
+    min-width: 100%;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+#controls {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 30%;
+    width: 100%;
+
+    justify-self: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#controls .button-background {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #007d99, #42c1b2);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+#controls:hover .button-background {
+    transition: var(--transition);
+    opacity: 1;
+}
+
+#controls img {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: var(--transition);
+}
+
+#controls .showing {
+    opacity: 1;
+    transition: var(--transition);
+}
+
+
+@media only screen and (min-height: 600px) and (min-width: 600px) {
+    #full-screen {
+        background: linear-gradient(0deg, #007d99, #42c1b2);
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+    }
+
+    #container {
+        justify-self: center;
+        top: 5%;
+        bottom: 5%;
+        width: 30rem;
+        padding: 30px;
+    }
+
+    #cover {
+        width: 16rem;
+        height: 16rem;
+
+        min-width: 0%;
+        min-height: 0%;
+        max-width: 100%;
+        max-height: 100%;
+
+        border-radius: 20px;
+        border-width: 2px;
+        margin-bottom: 1rem;
+    }
+
+    #sound-animation {
+        height: 8rem;
+        min-height: 0%;
+        max-height: 40%;
+    }
+
+    #sound-animation .stroke{
+        width: 16px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 16rem;
+        opacity: 0;
+        min-width: 30%;
+        max-width: 80%;
+    }
+
+    .labels {
+        font-size: 1.5rem;
+    }
+
+    .web {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    #container {
+        padding: 25px;
+    }
+
+    #cover {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 18px;
+        border-width: 2px;
+        margin-bottom: 1rem;
+    }
+
+    #sound-animation {
+        height: 6rem;
+    }
+
+    #sound-animation .stroke{
+        width: 12px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 12rem;
+        opacity: 0;
+    }
+
+    .labels {
+        font-size: 1.5rem;
+    }
+
+    .web {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media only screen and (max-height: 400px) {
+    #container {
+        padding: 20px;
+    }
+
+    #cover {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 15px;
+        border-width: 1px;
+        margin-bottom: 1rem;
+    }
+
+    #sound-animation {
+        height: 4rem;
+    }
+
+    #sound-animation .stroke{
+        width: 10px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 8rem;
+        opacity: 0;
+    }
+
+    .labels {
+        font-size: 1.3rem;
+    }
+
+    .web {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-height: 300px) {
+    #container {
+        padding: 15px;
+    }
+
+    #cover {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 12px;
+        border-width: 1px;
+        margin-bottom: 1rem;
+    }
+
+    #sound-animation {
+        height: 3.5rem;
+    }
+
+    #sound-animation .stroke{
+        width: 8px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 7rem;
+        opacity: 0;
+    }
+
+    .labels {
+        font-size: 1.2rem;
+    }
+
+    .web {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-height: 250px) {
+    #container {
+        padding: 10px;
+    }
+
+    #cover {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 10px;
+        border-width: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    #sound-animation {
+        height: 1.5rem;
+    }
+
+    #sound-animation .stroke{
+        width: 8px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 5rem;
+        opacity: 0;
+    }
+
+    #controls {
+        height: 25%;
+    }
+
+    .labels {
+        font-size: 1.2rem;
+    }
+
+    .web {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape){
+    .web {
+        justify-self: center;
+    }
+
+    #cover {
+        width: 25rem;
+        height: 25rem;
+        min-width: 30vh;
+        min-height: 30vh;
+        max-width: 80vh;
+        max-height: 80vh;
+        left: 0;
+        transform: translateX(0%);
+    }
+
+    #sound-animation {
+        height: 12.5rem;
+        width: 70%;  
+        min-height: 15vh;
+        max-height: 40vh;
+    }
+
+    #sound-animation .stroke{
+        width: 30px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: inherit;
+        width: 30px;
+        min-width: 0px;
+        min-height: 0px;
+        opacity: 1;
+    }
+
+    #controls {
+        bottom: 0px;
+        right: 0px;
+        top: 0px;
+        width: 30%;
+        height: 100%;
+
+        align-self: center;
+        justify-self: right;
+    }
+
+    .info {
+        width: 65%;
+        position: absolute;
+        bottom: 10px;
+    }
+}
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .web {
+        justify-self: center;
+    }
+
+    #cover {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    #sound-animation {
+        height: 11rem;
+    }
+
+    #sound-animation .stroke{
+        width: 28px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 28x;
+    }
+}
+
+@media only screen and (max-height: 400px) and (orientation: landscape) {
+    .web {
+        justify-self: center;
+    }
+
+    #cover {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #sound-animation {
+        height: 7.5rem;
+    }
+
+    #sound-animation .stroke{
+        width: 25px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 25px;
+    }
+}
+
+@media only screen and (max-height: 300px) and (orientation: landscape) {
+    .web {
+        justify-self: left;
+    }
+
+    #cover {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    #sound-animation {
+        height: 6rem;
+    }
+
+    #sound-animation .stroke{
+        width: 20px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 20px;
+    }
+}
+
+@media only screen and (max-height: 250px) and (orientation: landscape) {
+    .web {
+        justify-self: left;
+    }
+
+    #cover {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #sound-animation {
+        height: 4rem;
+    }
+
+    #sound-animation .stroke{
+        width: 15px;
+    }
+
+    #sound-animation .stroke:nth-child(6){
+        width: 15px;
+    }
+}
+
+@media only screen and (min-height: 1280px) and (orientation: portrait)
+{
+    :root {
+        font-size: 24px;
+    }
+
+    #container {
+        border-radius: 60px;
+        top: 20%;
+        bottom: 20%;
+    }
+
+    #cover {
+        border-radius: 50px;
+    }
+
+    #cover img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #sound-animation .stroke {
+        width: 25px;
+    }
+}
+
+
+
+
+
+
