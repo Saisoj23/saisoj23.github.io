@@ -47,21 +47,24 @@
 }
 
 #top-view {
+    margin-bottom: 1.5rem;
     display: flex;
     padding: 2px;
-    align-items: center;
+    align-items:center;
     flex-direction: row;
+    top: 0px;
 }
 
 #cover {
     width: 16rem;
     height: 16rem;
+    aspect-ratio: 1/1;
     overflow: hidden;
 
-    min-width: 30vw;
-    min-height: 30vw;
-    max-width: 80vw;
-    max-height: 80vw;
+    min-width: 40vh;
+    min-height: 40vh;
+    max-width: 60vw;
+    max-height: 60vw;
     align-content: center;
     justify-content: center;
     background-color: black;
@@ -80,7 +83,7 @@
     align-items: center;
     justify-content: center;
     height: 16rem;
-    min-height: 30vw;
+    min-height: 40vh;
     max-height: 80vw;
     flex: 1;
     
@@ -152,7 +155,7 @@
     right: 0px;
     left: 0px;
     height: 25vh;
-    width: 25vh;
+    aspect-ratio: 1/1;
 
     justify-self: center;
     cursor: pointer;
@@ -189,8 +192,10 @@
     transition: var(--transition);
 }
 
-
-@media only screen and (min-height: 600px) and (min-width: 600px) {
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------fullscreen---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-height: 600px) and (min-width: 600px) and (orientation: landscape) {
     #full-screen {
         background: linear-gradient(0deg, #007d99, #42c1b2);
         position: absolute;
@@ -210,6 +215,11 @@
         padding: 30px;
     }
 
+    #top-view {
+        top: 0px;
+        max-height: 35vh;
+    }
+
     #cover {
         width: 16rem;
         height: 16rem;
@@ -218,8 +228,6 @@
         min-height: 0%;
         max-width: 100%;
         max-height: 100%;
-
-        border-width: 10px;
     }
 
     #live-icon {
@@ -237,9 +245,80 @@
     }
 }
 
+@media only screen and (min-height: 600px) and (min-width: 600px) and (orientation: portrait) {
+    #full-screen {
+        background: linear-gradient(0deg, #007d99, #42c1b2);
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+    }
+
+    #container {
+        background-color: #f1f1f1;
+        border-radius: 40px;
+        justify-self: center;
+        top: 15%;
+        bottom: 15%;
+        width: 80%;
+        padding: 30px;
+    }
+
+    #top-view {
+        top: 0px;
+        max-height: 35vh;
+    }
+
+    #cover {
+        width: 40rem;
+        height: 40rem;
+
+        min-width: 0%;
+        min-height: 0%;
+        max-width: 100%;
+        max-height: 100%;
+        border-width: 30px;
+    }
+
+    #cover img {
+        min-width: 100%;
+    }
+
+    #live-icon {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    #controls {
+        position: absolute;
+        bottom: 2.5vh;
+        right: 0px;
+        left: 0px;
+        height: 30vw;
+    }
+
+    .labels {
+        font-size: 5rem;
+    }
+
+    .web {
+        display: block;
+        font-size: 5rem;
+    }
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------Vertical----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media only screen and (max-height: 500px) {
     #container {
         padding: 25px;
+    }
+
+    #top-view {
+        margin-bottom: 1.5rem;
     }
 
     #cover {
@@ -269,6 +348,8 @@
         padding: 20px;
     }
 
+    
+
     #cover {
         width: 8rem;
         height: 8rem;
@@ -295,6 +376,10 @@
         padding: 15px;
     }
 
+    #top-view {
+        margin-bottom: 1rem;
+    }
+
     #cover {
         width: 7rem;
         height: 7rem;
@@ -318,7 +403,11 @@
 
 @media only screen and (max-height: 250px) {
     #container {
-        padding: 10px;
+        padding: 5px;
+    }
+
+    #top-view {
+        margin-bottom: 0rem;
     }
 
     #cover {
@@ -341,7 +430,10 @@
     }
 }
 
-@media only screen and (max-height: 600px) and (orientation: landscape){
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------Horizontal---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-aspect-ratio: 2/1) and (not ((min-height: 600px) and (min-width: 600px))) {
     .web {
         justify-self: center;
     }
@@ -357,7 +449,6 @@
         min-height: 30vh;
         max-width: 80vh;
         max-height: 80vh;
-        left: 0;
         transform: translateX(0%);
     }
 
@@ -370,8 +461,8 @@
         bottom: 0px;
         right: 2.5vw;
         top: 0px;
-        width: 25vw;
-        height: 25vw;
+        width: 20vw;
+        height: 20vw;
 
         align-self: center;
         justify-self: right;
@@ -384,7 +475,7 @@
     }
 }
 
-@media only screen and (max-height: 500px) and (orientation: landscape) {
+@media only screen and (max-height: 500px) and (min-aspect-ratio: 2/1) {
     .web {
         justify-self: center;
     }
@@ -400,7 +491,7 @@
     }
 }
 
-@media only screen and (max-height: 400px) and (orientation: landscape) {
+@media only screen and (max-height: 400px) and (min-aspect-ratio: 2/1) {
     .web {
         justify-self: center;
     }
@@ -416,7 +507,7 @@
     }
 }
 
-@media only screen and (max-height: 300px) and (orientation: landscape) {
+@media only screen and (max-height: 300px) and (min-aspect-ratio: 2/1) {
     .web {
         justify-self: left;
     }
@@ -432,7 +523,7 @@
     }
 }
 
-@media only screen and (max-height: 250px) and (orientation: landscape) {
+@media only screen and (max-height: 250px) and (min-aspect-ratio: 2/1) {
     .web {
         justify-self: left;
     }
@@ -456,7 +547,7 @@
     }
 }
 
-@media only screen and (min-height: 1280px) and (orientation: portrait)
+@media only screen and (min-height: 1280px) and (min-aspect-ratio: 2/1)
 {
     :root {
         font-size: 24px;
