@@ -17,6 +17,9 @@
     height: 100%;
     z-index: 15;
     background-color: rgba(0,0,0, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     align-content: center;
     justify-items: center;
     transition: all 200ms ease-in;
@@ -32,13 +35,18 @@
     position: relative;
     height: 90%;
     width: 90%;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
     align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 #image-overlay img {
     max-height: 100%;
     max-width: 100%;
+    align-self: center;
 }
 
 #image-overlay figcaption button {
