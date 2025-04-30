@@ -396,6 +396,8 @@ mark {
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow), var(--light-rim);
     overflow: hidden;
+    width: 40rem;
+    
 
     transition: all 100ms ease-in;
 }
@@ -788,6 +790,10 @@ form {
 
     .grid-row {
         height: 20rem;
+    }
+
+    .row-image {
+        width: 20rem;
     }
 
     .grid-row:nth-child(even) .row-image{
