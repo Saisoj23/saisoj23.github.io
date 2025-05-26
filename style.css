@@ -135,11 +135,10 @@ footer a {
 
 footer a:hover {
     color: #E26400;
-    fill: #E26400;
 }
 
-footer a:hover svg{
-    mask-image: cover;
+footer a:hover img{
+    filter: brightness(0) saturate(100%) invert(48%) sepia(66%) saturate(4167%) hue-rotate(7deg) brightness(95%) contrast(101%);
 }
 
 h2 {
@@ -426,7 +425,7 @@ iframe {
     left: 50%;
     transform: translate(-50%);
     width: 50vw;
-    height: 28vw;
+    height: 30vw;
 }
 
 .game-logos {
@@ -739,7 +738,7 @@ form {
     transition: all var(--second-to-sd) ease-in calc((var(--second-to-saisoj) * 2));
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-aspect-ratio: 6/5) {
 
     footer {
         font-size: 2rem;

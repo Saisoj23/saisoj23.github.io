@@ -195,7 +195,7 @@
                 <label>*Asunto</label>
                 <input type="text" name="subject" required placeholder="Un asunto importante">
                 <label>Teléfono</label>
-                <input type="tel" name="phone" placeholder="+54 9 1234-567891" minlength="9" maxlength="14" pattern="[0-9]{9-14}">
+                <input type="tel" name="phone" placeholder="+54 9 1234-567891" minlength="9" maxlength="14" pattern="/^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/">
                 <label>*Mensaje</label>
                 <textarea name="message" required placeholder="Escribía para consultar sobre..."></textarea>
                 <p>* Requerido</p>
