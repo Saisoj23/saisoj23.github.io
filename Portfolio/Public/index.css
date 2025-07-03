@@ -40,8 +40,8 @@ body > .background {
     bottom: 0px;
     right: 0px;
     left: 0px;
-    background-blend-mode: hue;
-    background-image: url("/Portfolio/Public/Backgrounds/Background.png");
+    background-color: var(--color-a);
+    background-image: url("../Public/Backgrounds/Background.png");
     background-size: 100% 100%;
     z-index: -5;
 }
@@ -70,7 +70,8 @@ body > .background {
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
-    background-image: url("/Portfolio/Public/Backgrounds/Background.png");
+    background-color: var(--color-a);
+    background-image: url("../Public/Backgrounds/Background.png");
     z-index: -1;
 }
 
