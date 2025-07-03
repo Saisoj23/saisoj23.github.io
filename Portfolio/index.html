@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Josias Vallejos - Portafolio</title>
+
+    <script defer src="/Public/burguer-button.js"></script>
+    <script defer src="/Public/splash-screen.js"></script>
+    <script defer src="/Public/open-image.js"></script>
+    <script defer src="/Public/open-folder.js"></script>
+
+    <link rel="stylesheet" href="/Public/index.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <div id="splash" class="fullscreen">
+      <div class="background"></div>
+      <img src="/Public/SVG/SplashScreen/logicless.svg" />
+      <div>
+        <h1>Josías E. Vallejos</h1>
+        <h2>Portafolio</h2>
+      </div>
+    </div>
+
+    <div id="image-overlay" class="invisible" onclick="CloseImageView('')">
+      <figure>
+        <img id="image-full" src="" />
+        <figcaption>
+          <button onclick="CloseImageView('')">cerrar</button>
+        </figcaption>
+      </figure>
+    </div>
+
+    <header>
+      <button id="burguer">
+        <img src="Public/SVG/Iconos/menu-1-svgrepo-com.svg" />
+      </button>
+      <h1>Josías E. Vallejos</h1>
+      <a href="/Public/PDFs/Español - Josias Vallejos CV.pdf" download
+        ><h3>Descargar CV</h3></a
+      >
+    </header>
+
+    <main>
+      <nav class="hidden override-hidden">
+        <h3>Contenidos</h3>
+        <div>
+          <a href="#sobremi">Sobre mí</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#experiencia">Experiencia laboral</a>
+          <a href="#certificaciones">Certificaciones</a>
+          <a href="#portafolio">Portafolio artístico</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+
+      <article>
+        <section id="sobremi"></section>
+        <h2>Sobre mí</h2>
+        <div class="content-box">
+          <img class="profile" src="Public/Imagenes/self.jpg" />
+
+          <p>
+            Bienvenido a mi portafolio. Soy un estudiante de desarrollo front
+            end junior con un profundo interés en el crecimiento profesional
+            dentro del ámbito tecnológico. Aunque mi experiencia práctica aún es
+            limitada, me distingo por una actitud proactiva, una gran
+            disposición para aprender y una fuerte determinación para
+            desarrollarme continuamente en este campo.
+          </p>
+          <p>
+            Mi formación en el ámbito tecnológico ha sido en gran parte
+            autodidacta, lo que me ha llevado a explorar y adquirir
+            conocimientos en diversas disciplinas complementarias como animación
+            3D, diseño gráfico, edición de video y desarrollo de videojuegos.
+            Esta diversidad me ha permitido desarrollar una visión integral del
+            proceso creativo y técnico, fortaleciendo tanto mis habilidades como
+            mi capacidad de adaptación a distintos retos.
+          </p>
+          <p>
+            Mi objetivo es integrarme a equipos de trabajo donde pueda seguir
+            aprendiendo, aportar desde mis múltiples intereses y continuar
+            construyendo soluciones funcionales, atractivas y centradas en la
+            experiencia del usuario.
+          </p>
+        </div>
+
+        <section id="habilidades"></section>
+        <h2>Habilidades</h2>
+        <div class="content-box">
+          <div class="folder-container">
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(0)">
+                <h3>Edición de imágenes y diseño gráfico</h3>
+                <video
+                  autoplay
+                  muted
+                  loop
+                  src="Public/Video/design.mp4"
+                ></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Tengo un fuerte interés en la edición de imágenes y la
+                  fotografía, disciplinas que desarrollo de manera autodidacta.
+                  Suelo trabajar principalmente con mis propias fotografías,
+                  enfocándome en capturar escenas de fauna, las cuales edito
+                  para resaltar detalles y atmósferas específicas. Además,
+                  manejo software de diseño vectorial, lo que me permite crear
+                  ilustraciones, logotipos, piezas publicitarias, tarjetas y
+                  otros elementos gráficos, uniendo estética y funcionalidad en
+                  cada trabajo.
+                </p>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/design1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/design2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/design3.mp4"
+                  ></video>
+                </div>
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(1)">
+                <h3>Edición de video</h3>
+                <video autoplay muted loop src="Public/Video/video.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  La edición de video es otra de las áreas que me apasionan y en
+                  la que he incursionado de forma autodidacta. Mi interés
+                  comenzó a partir de una breve exploración en el mundo del
+                  motion graphics y los efectos especiales, lo que me llevó
+                  también a realizar algunos tutoriales introductorios de
+                  Unity3D. Actualmente, suelo trabajar en la edición de
+                  animaciones cortas y pequeños videos acelerados,
+                  principalmente destinados a redes sociales, donde combino
+                  ritmo visual y narrativa en formatos dinámicos y accesibles.
+                </p>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/video3.mp4"
+                  ></video>
+                </div>
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(2)">
+                <h3>Modelado y animación 3D</h3>
+                <video autoplay muted loop src="Public/Video/3d.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  El modelado y la animación 3D representan una de mis áreas de
+                  mayor interés creativo, donde disfruto explorar cada etapa del
+                  proceso: desde la composición de la escena y la creación de
+                  materiales, hasta el trabajo detallado en la iluminación y el
+                  render final. Me interesa no solo el aspecto técnico, sino
+                  también el potencial narrativo de cada pieza. Aunque solo he
+                  realizado pequeños clips de pocos segundos, trato de
+                  enfocarlos en que puedan transmitir una emoción, contar una
+                  breve historia o generar una atmósfera particular, cuidando
+                  tanto el contenido visual como el impacto expresivo de cada
+                  animación.
+                </p>
+                <div class="gif-flex">
+                  <video autoplay muted loop src="Public/Video/3d1.mp4"></video>
+                  <video autoplay muted loop src="Public/Video/3d2.mp4"></video>
+                  <video autoplay muted loop src="Public/Video/3d3.mp4"></video>
+                </div>
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(3)">
+                <h3>Desarrollo de videojuegos con Unity (C#))</h3>
+                <video autoplay muted loop src="Public/Video/games.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Los videojuegos han sido una de mis pasiones más constantes y
+                  una fuente de inspiración que ha motivado gran parte de mi
+                  aprendizaje autodidacta. A lo largo de los años, he
+                  experimentado con el motor Unity3D (y en menor medida con
+                  Godot) en el desarrollo de proyectos tanto en 2D como en 3D.
+                  Esta exploración me ha permitido integrar conocimientos de
+                  otras disciplinas que también me apasionan, como el modelado
+                  3D y el pixel art. Fruto de este proceso, he creado diversas
+                  demos y dos videojuegos completos: Chess Labyrinths, un juego
+                  de puzzles con mecánicas inspiradas en el ajedrez, y Axys
+                  Hell, un juego arcade de ritmo rápido. Ambos proyectos
+                  reflejan mi interés en el diseño, la jugabilidad y la
+                  narrativa visual.
+                </p>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/games1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/games2.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/games3.mp4"
+                  ></video>
+                </div>
+              </div>
+            </div>
+
+            <div class="folder">
+              <div class="folder-title" onclick="OpenFolder(4)">
+                <h3>Desarrollo front-end</h3>
+                <video autoplay muted loop src="Public/Video/web.mp4"></video>
+              </div>
+
+              <div class="folder-content">
+                <p>
+                  Recientemente he comenzado a enfocar mi formación en el
+                  desarrollo front end, encontrando un particular interés en el
+                  uso de animaciones CSS para enriquecer la experiencia del
+                  usuario y aportar dinamismo a las interfaces. Esta área me ha
+                  resultado especialmente atractiva, ya que me permite combinar
+                  mis habilidades técnicas con mi sensibilidad visual. Mi
+                  conocimiento previo en ilustración vectorial ha sido un apoyo
+                  fundamental para diseñar elementos gráficos limpios y
+                  escalables, que luego integro de forma animada y funcional en
+                  entornos web. Este cruce entre diseño y código es lo que más
+                  me motiva a seguir profundizando en esta disciplina.
+                </p>
+                <div class="gif-flex">
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/web1.mp4"
+                  ></video>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    src="Public/Video/web2.mp4"
+                  ></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="experiencia"></section>
+        <h2>Experiencia laboral</h2>
+        <div class="content-box">
+          <h3>Trabajo 1</h3>
+          <div class="timeline">
+            <ul class="timeline-notes">
+              <li>10/10/2005</li>
+              <li>10/10/2012</li>
+            </ul>
+            <div class="timeline-ilustration">
+              <div></div>
+              <hr />
+              <div></div>
+            </div>
+          </div>
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+
+          <h3>Trabajo 2</h3>
+          <div class="timeline">
+            <ul class="timeline-notes">
+              <li>10/10/2012</li>
+              <li>10/10/2018</li>
+            </ul>
+            <div class="timeline-ilustration">
+              <div></div>
+              <hr />
+              <div></div>
+            </div>
+          </div>
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+
+          <h3>Trabajo 3</h3>
+          <div class="timeline">
+            <ul class="timeline-notes">
+              <li>10/10/2018</li>
+              <li>Actualidad</li>
+            </ul>
+            <div class="timeline-ilustration">
+              <div></div>
+              <hr />
+              <div></div>
+            </div>
+          </div>
+          <p>
+            beatae ab est ipsa iusto architecto? Sunt maiores sit sequi minus
+            perferendis iste fugit, labore repudiandae cum eum voluptatibus, rem
+            blanditiis error reiciendis sed reprehenderit nihil ut odio eos!
+            Tenetur asperiores nesciunt quaerat officia cumque ex reiciendis,
+            hic dolor eos sit laudantium non repudiandae, numquam dolore rerum
+            est, sed vero libero. Perspiciatis sequi necessitatibus delectus
+            magni ipsa itaque exercitationem. Assumenda saepe facere delectus ad
+            laborum atque ex fuga itaque eos nobis commodi, rem exercitationem
+            quod ipsa cupiditate debitis illum consequatur doloribus aperiam.
+            Mollitia quae porro deleniti rerum consectetur libero. Reiciendis
+            consequatur debitis voluptas iure in, eius nam praesentium labore
+            error tenetur ipsam, laborum, earum eligendi adipisci cumque aliquam
+            officiis vitae cum. Modi, cumque sed quasi accusantium et minus
+            perspiciatis. Iste, facilis reiciendis. Tempore vel minus ipsam
+            quidem provident. Cupiditate ratione repudiandae eligendi ipsam
+            aliquam veritatis aperiam perspiciatis magnam quibusdam! Voluptatum
+            soluta delectus error, possimus corporis corrupti! Sunt, consectetur
+            doloremque?
+          </p>
+        </div>
+
+        <section id="certificaciones"></section>
+        <h2>Certificaciones</h2>
+        <div class="content-box">
+          <div class="box-grid">
+            <div
+              class="box-element"
+              onclick="OpenImageView('/Public/Imagenes/Certificados/diseno_grafico.png')"
+            >
+              <img src="/Public/SVG/Iconos/bezier-svgrepo-com.svg" />
+              <h4>Diseño Gráfico con Orientación en Redes Sociales</h4>
+              — Fundación Instituto Latinoamericano de Desarrollo Social y Salud
+            </div>
+            <div
+              class="box-element"
+              onclick="OpenImageView('/Public/Imagenes/Certificados/marketing_digital.png')"
+            >
+              <img src="/Public/SVG/Iconos/shop-svgrepo-com.svg" />
+              <h4>Marketing Digital Orientado a Redes Sociales</h4>
+              — Centro de Formación Laboral N.º 401
+            </div>
+            <div class="box-element">
+              <img src="/Public/SVG/Iconos/code-svgrepo-com.svg" />
+              <h4>Diplomatura en Desarrollo Frontend</h4>
+              — Universidad UNTREF
+            </div>
+            <div
+              class="box-element"
+              onclick="OpenImageView('/Public/Imagenes/Certificados/high_school.png')"
+            >
+              <img src="/Public/SVG/Iconos/verify-svgrepo-com.svg" />
+              <h4>High School Diploma</h4>
+              — Ramey Unit School, Aguadilla, Puerto Rico
+            </div>
+            <div class="box-element">
+              <img src="/Public/SVG/Iconos/book-1-svgrepo-com.svg" />
+              <h4>Tecnicatura Universitaria en Tecnología de la información</h4>
+              — Universidad Kennedy
+            </div>
+          </div>
+        </div>
+
+        <section id="portafolio"></section>
+        <h2>Portafolio artístico</h2>
+        <div class="content-box">
+          <img
+            class="float-right"
+            src="Public/Imagenes/phone_portfolio-2.png"
+          />
+          <p>
+            Este portafolio artístico reúne una selección de trabajos previos
+            que, si bien no están directamente relacionados con el desarrollo
+            front end, reflejan mi interés y formación autodidacta en diversas
+            disciplinas creativas. Aquí se pueden encontrar ejemplos de
+            animación digital, pixel art, diseño gráfico, así como proyectos
+            realizados de manera manual, como encuadernación artesanal.
+          </p>
+          <p>
+            Cada pieza forma parte de un proceso de exploración y aprendizaje
+            constante, y representa mi compromiso con la expresión visual, la
+            atención al detalle y la búsqueda de calidad estética en distintos
+            formatos y técnicas. Este cuerpo de trabajo complementa mi perfil
+            técnico, aportando una dimensión creativa que enriquece mi enfoque
+            en el diseño y desarrollo de experiencias visuales.
+          </p>
+
+          <a href="https://saisoj23.github.io" target="_blank">
+            <img class="art-logo" src="Public/SVG/Logos/SaisojArts.svg" />
+          </a>
+        </div>
+
+        <section id="contacto"></section>
+        <h2>Contacto</h2>
+        <div class="content-box">
+          <form method="POST">
+            <!--action="https://formsubmit.co/cfb3fe480b9721776c6e6d7646b14e54"-->
+            <label for="name">*Nombre</label>
+            <input type="text" name="name" required placeholder="Alex Doe" />
+            <label for="email">*E-mail</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="alexdoe@email.com"
+            />
+            <label for="subject">*Asunto</label>
+            <input
+              type="text"
+              name="subject"
+              required
+              placeholder="Un asunto importante"
+            />
+            <label for="phone">Teléfono</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+54 9 1234-567891"
+              minlength="9"
+              maxlength="14"
+              pattern="/^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/"
+            />
+            <label for="message">*Mensaje</label>
+            <textarea
+              name="message"
+              required
+              placeholder="Escribía para consultar sobre..."
+            ></textarea>
+            <p>* Requerido</p>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>© Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>

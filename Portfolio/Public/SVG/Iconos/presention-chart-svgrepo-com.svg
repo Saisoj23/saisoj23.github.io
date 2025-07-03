@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="presention-chart-svgrepo-com.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.4389623"
+     inkscape:cx="316.89503"
+     inkscape:cy="412.79747"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <path
+     d="M22 2.75H2C1.59 2.75 1.25 2.41 1.25 2C1.25 1.59 1.59 1.25 2 1.25H22C22.41 1.25 22.75 1.59 22.75 2C22.75 2.41 22.41 2.75 22 2.75Z"
+     fill="#292D32"
+     id="path2"
+     style="fill:#ffffff" />
+  <path
+     id="path4"
+     style="fill:#ffffff;stroke-width:33.3333"
+     d="M 100 66.666016 L 100 470 C 100 533.33333 133.33268 566.66602 196.66602 566.66602 L 375.00977 566.66602 L 375.00977 651.33398 L 255.67578 711 C 243.00911 717 238.00846 731.99935 244.3418 744.66602 C 248.67513 753.33268 257.67578 758.33398 266.67578 758.33398 C 270.34245 758.33398 274.34245 757.33268 277.67578 755.66602 L 400.00977 694.66602 L 522.34375 755.66602 C 525.67708 757.33268 529.67708 758.33398 533.34375 758.33398 C 542.34375 758.33398 551.34245 753.33268 555.67578 744.66602 C 562.00911 731.99935 557.01042 717 544.34375 711 L 425.00977 651.33398 L 425.00977 566.66602 L 603.33398 566.66602 C 666.66732 566.66602 700 533.33333 700 470 L 700 66.666016 L 100 66.666016 z M 549.89453 241.50586 C 557.09937 241.51392 564.27148 244.66602 569.33398 250.66602 C 578.00065 261.33268 576.66667 277 566 286 L 461 373.66602 C 451.33333 381.66602 439.00065 385 427.33398 383 C 415.33398 381 404.99935 373.66667 398.66602 363 L 363.66602 304.66602 L 266 386 C 261.33333 390 255.66667 391.66602 250 391.66602 C 243 391.66602 235.66602 388.66602 230.66602 382.66602 C 221.66602 371.99935 223.33333 356.33398 234 347.33398 L 339 259.66602 C 348.66667 251.66602 360.99935 248.33398 372.66602 250.33398 C 384.66602 252.33398 395.00065 259.66732 401.33398 270.33398 L 436.33398 328.66602 L 534 247.33398 C 538.66667 243.39648 544.29077 241.49959 549.89453 241.50586 z "
+     transform="scale(0.03)" />
+</svg>
