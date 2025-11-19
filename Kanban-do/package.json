@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://saisoj23.github.io/saisoj23.github.io/Kanban-do",
+  "homepage": "https://saisoj23.github.io/saisoj23.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
