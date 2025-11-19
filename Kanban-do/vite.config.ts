@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "https://saisoj23.github.io/Kanban-do/",
+  base: "/saisoj23.github.io/Kanban-do",
   plugins: [tailwindcss(), react()],
 });
